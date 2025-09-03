@@ -1,8 +1,20 @@
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ArrowRight, Play, Smartphone, Heart, Clock, Wallet, Car, Home, Coffee, ShoppingBag, Camera, Music, Gamepad2, Book, MapPin, Utensils, Plane, Calendar, ShieldCheck, Zap, Users, Briefcase, GraduationCap, Gift, Headphones, Monitor, Dumbbell, Car as Taxi, Pill, TreePine, ShoppingCart } from "lucide-react";
 
 const HeroSection = () => {
+  const [api, setApi] = React.useState<any>();
+
+  React.useEffect(() => {
+    if (!api) return;
+
+    const autoScroll = setInterval(() => {
+      api.scrollNext();
+    }, 3000); // Auto scroll every 3 seconds
+
+    return () => clearInterval(autoScroll);
+  }, [api]);
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center bg-background">
       {/* Content */}
@@ -34,11 +46,13 @@ const HeroSection = () => {
           <div className="mt-16 mb-12">
             <h3 className="text-lg font-semibold text-muted-foreground mb-8">30+ 生活场景 AI 助手</h3>
             <Carousel
+              setApi={setApi}
               opts={{
                 align: "start",
                 loop: true,
+                dragFree: true,
               }}
-              className="w-full max-w-5xl mx-auto"
+              className="w-full max-w-6xl mx-auto"
             >
               <CarouselContent className="-ml-2 md:-ml-4">
                 {[
@@ -72,12 +86,44 @@ const HeroSection = () => {
                   { icon: TreePine, label: "环保", color: "text-emerald-500" },
                   { icon: ShoppingCart, label: "电商", color: "text-orange-600" },
                 ].map((app, index) => (
-                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3 sm:basis-1/4 md:basis-1/6 lg:basis-1/8">
-                    <div className="flex flex-col items-center group cursor-pointer">
-                      <div className="w-12 h-12 md:w-14 md:h-14 bg-card border border-border rounded-xl flex items-center justify-center mb-3 group-hover:border-brand-green group-hover:shadow-glow transition-all duration-300">
-                        <app.icon className={`w-6 h-6 md:w-7 md:h-7 ${app.color} group-hover:text-brand-green transition-colors`} />
+                  <CarouselItem key={index} className="pl-3 md:pl-4 basis-1/4 sm:basis-1/5 md:basis-1/7 lg:basis-1/9">
+                    <div className="flex flex-col items-center group cursor-pointer p-2">
+                      {/* App Store style icon */}
+                      <div className="relative w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105 overflow-hidden">
+                        {/* Icon background gradient based on color */}
+                        <div className={`absolute inset-0 bg-gradient-to-br opacity-20 ${
+                          app.color.includes('red') ? 'from-red-400 to-red-600' :
+                          app.color.includes('blue') ? 'from-blue-400 to-blue-600' :
+                          app.color.includes('green') ? 'from-green-400 to-green-600' :
+                          app.color.includes('purple') ? 'from-purple-400 to-purple-600' :
+                          app.color.includes('orange') ? 'from-orange-400 to-orange-600' :
+                          app.color.includes('amber') ? 'from-amber-400 to-amber-600' :
+                          app.color.includes('pink') ? 'from-pink-400 to-pink-600' :
+                          app.color.includes('cyan') ? 'from-cyan-400 to-cyan-600' :
+                          app.color.includes('violet') ? 'from-violet-400 to-violet-600' :
+                          app.color.includes('indigo') ? 'from-indigo-400 to-indigo-600' :
+                          app.color.includes('emerald') ? 'from-emerald-400 to-emerald-600' :
+                          app.color.includes('teal') ? 'from-teal-400 to-teal-600' :
+                          app.color.includes('rose') ? 'from-rose-400 to-rose-600' :
+                          app.color.includes('yellow') ? 'from-yellow-400 to-yellow-600' :
+                          app.color.includes('sky') ? 'from-sky-400 to-sky-600' :
+                          app.color.includes('slate') ? 'from-slate-400 to-slate-600' :
+                          app.color.includes('lime') ? 'from-lime-400 to-lime-600' :
+                          app.color.includes('gray') ? 'from-gray-400 to-gray-600' :
+                          'from-brand-green to-accent-lime'
+                        }`} />
+                        
+                        {/* Icon */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <app.icon className={`w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 ${app.color} drop-shadow-sm`} />
+                        </div>
+                        
+                        {/* Shine effect */}
+                        <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </div>
-                      <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors text-center">{app.label}</span>
+                      
+                      {/* App name */}
+                      <span className="text-xs font-medium text-muted-foreground group-hover:text-foreground transition-colors text-center mt-2 leading-tight max-w-full">{app.label}</span>
                     </div>
                   </CarouselItem>
                 ))}
