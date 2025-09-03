@@ -52,7 +52,7 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Monster AI Brand Colors - Black & Bright Green Theme
+				// Monster AI Brand Colors - Colorful & Friendly Theme
 				brand: {
 					green: 'hsl(var(--brand-green))',
 					'green-light': 'hsl(var(--brand-green-light))',
@@ -61,9 +61,22 @@ export default {
 					gray: 'hsl(var(--brand-gray))',
 					'gray-light': 'hsl(var(--brand-gray-light))',
 				},
+				// Monster Character Colors
+				monster: {
+					pink: 'hsl(var(--monster-pink))',
+					purple: 'hsl(var(--monster-purple))',
+					blue: 'hsl(var(--monster-blue))',
+					green: 'hsl(var(--monster-green))',
+					orange: 'hsl(var(--monster-orange))',
+					yellow: 'hsl(var(--monster-yellow))',
+				},
 				'accent-lime': 'hsl(var(--accent-lime))',
 				'accent-emerald': 'hsl(var(--accent-emerald))',
 				'accent-yellow': 'hsl(var(--accent-yellow))',
+				'accent-purple': 'hsl(var(--accent-purple))',
+				'accent-blue': 'hsl(var(--accent-blue))',
+				'accent-pink': 'hsl(var(--accent-pink))',
+				'accent-orange': 'hsl(var(--accent-orange))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -80,6 +93,8 @@ export default {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-accent': 'var(--gradient-accent)',
 				'gradient-dark': 'var(--gradient-dark)',
+				'gradient-monsters': 'var(--gradient-monsters)',
+				'gradient-warm': 'var(--gradient-warm)',
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',

@@ -33,20 +33,20 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container mx-auto px-6 py-12 text-center relative z-10">
         <div className="max-w-6xl mx-auto">
-          {/* Monster Character */}
+          {/* Monster Characters Team */}
           <div className="flex justify-center mb-6">
             <div className="relative group">
               <img 
-                src="/lovable-uploads/17d11a30-4f7e-45b8-87fe-031e28fbd4d1.png" 
-                alt="AI Monster Character" 
-                className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain filter drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
-                style={{
-                  filter: 'drop-shadow(0 0 30px hsl(var(--brand-green) / 0.3)) drop-shadow(0 10px 20px rgba(0,0,0,0.2))',
-                  backgroundColor: 'transparent'
-                }}
+                src="/lovable-uploads/e4d05f88-e4ca-4e76-837a-7cf08738a6f0.png" 
+                alt="Monster AI Characters Team" 
+                className="w-80 h-48 md:w-96 md:h-60 lg:w-[28rem] lg:h-64 object-contain monster-glow group-hover:scale-105 transition-all duration-500"
               />
-              {/* Glow effect behind character */}
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-green/20 to-accent-lime/20 rounded-full blur-3xl -z-10 group-hover:from-brand-green/30 group-hover:to-accent-lime/30 transition-all duration-300" />
+              {/* Multi-colored glow effect behind characters */}
+              <div className="absolute inset-0 bg-gradient-monsters opacity-20 rounded-3xl blur-3xl -z-10 group-hover:opacity-30 transition-all duration-500" />
+              {/* Individual character glows */}
+              <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-monster-pink/30 rounded-full blur-2xl animate-pulse" />
+              <div className="absolute top-1/3 left-1/2 w-16 h-16 bg-monster-purple/30 rounded-full blur-2xl animate-pulse" style={{animationDelay: '0.5s'}} />
+              <div className="absolute top-1/2 right-1/4 w-12 h-12 bg-monster-blue/30 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}} />
             </div>
           </div>
 

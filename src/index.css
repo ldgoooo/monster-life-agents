@@ -29,29 +29,40 @@ All colors MUST be HSL.
     --input: 220 13% 15%;
     --ring: 220 100% 50%;
 
-    /* AI Brand Colors */
-    --brand-green: 142 100% 50%;
-    --brand-green-light: 142 100% 60%;
-    --brand-green-dark: 142 100% 35%;
-    --brand-black: 220 13% 4%;
-    --brand-gray: 220 13% 15%;
-    --brand-gray-light: 220 13% 25%;
+    /* Monster AI Brand Colors - Inspired by Colorful Monsters */
+    --brand-green: 142 65% 45%;
+    --brand-green-light: 142 65% 55%;
+    --brand-green-dark: 142 65% 35%;
+    --brand-black: 15 25% 15%;
+    --brand-gray: 15 15% 25%;
+    --brand-gray-light: 15 10% 35%;
     
-    /* AI Accent Colors */
-    --accent-lime: 78 100% 50%;
-    --accent-yellow: 48 100% 50%;
-    --accent-purple: 262 100% 70%;
-    --accent-blue: 217 100% 70%;
-    --accent-pink: 322 100% 70%;
+    /* Monster Character Colors */
+    --monster-pink: 345 85% 65%;
+    --monster-purple: 280 75% 60%;
+    --monster-blue: 200 85% 65%;
+    --monster-green: 120 60% 50%;
+    --monster-orange: 25 90% 60%;
+    --monster-yellow: 45 95% 65%;
     
-    /* AI Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-green)), hsl(var(--accent-lime)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-green)) 0%, hsl(var(--accent-lime)) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--accent-purple)), hsl(var(--accent-blue)));
-    --gradient-ai: linear-gradient(135deg, hsl(var(--accent-blue)), hsl(var(--accent-purple)), hsl(var(--accent-pink)));
-    --gradient-cyber: linear-gradient(90deg, hsl(var(--brand-green) / 0.2), hsl(var(--accent-lime) / 0.2), hsl(var(--accent-yellow) / 0.2));
+    /* Warm Accent Colors */
+    --accent-lime: 78 70% 55%;
+    --accent-yellow: 48 95% 65%;
+    --accent-purple: 280 75% 60%;
+    --accent-blue: 200 85% 65%;
+    --accent-pink: 345 85% 65%;
+    --accent-orange: 25 90% 60%;
+    --accent-emerald: 160 75% 50%;
+    
+    /* Monster AI Gradients - Warm & Friendly */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--monster-green)), hsl(var(--accent-lime)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--monster-purple)) 0%, hsl(var(--monster-pink)) 50%, hsl(var(--monster-orange)) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--monster-blue)), hsl(var(--monster-purple)));
+    --gradient-monsters: linear-gradient(135deg, hsl(var(--monster-pink)), hsl(var(--monster-purple)), hsl(var(--monster-blue)), hsl(var(--monster-green)), hsl(var(--monster-orange)), hsl(var(--monster-yellow)));
+    --gradient-cyber: linear-gradient(90deg, hsl(var(--monster-green) / 0.2), hsl(var(--accent-lime) / 0.2), hsl(var(--accent-yellow) / 0.2));
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent-emerald)), hsl(var(--accent-yellow)));
     --gradient-dark: linear-gradient(135deg, hsl(var(--brand-black)) 0%, hsl(var(--brand-gray)) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(var(--monster-orange)) 0%, hsl(var(--monster-yellow)) 100%);
     
     /* AI Effects */
     --shadow-soft: 0 4px 20px -4px hsl(var(--brand-green) / 0.25);
@@ -164,12 +175,16 @@ All colors MUST be HSL.
 
 /* Custom utility classes */
 .text-gradient {
-  background: var(--gradient-ai);
+  background: var(--gradient-monsters);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-size: 200% auto;
-  animation: text-shimmer 3s linear infinite;
+  background-size: 300% auto;
+  animation: text-shimmer 4s linear infinite;
+}
+
+.monster-glow {
+  filter: drop-shadow(0 0 20px hsl(var(--monster-purple) / 0.4)) drop-shadow(0 0 40px hsl(var(--monster-pink) / 0.2));
 }
 
 .bg-mesh {
