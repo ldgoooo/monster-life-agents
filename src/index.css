@@ -8,51 +8,57 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 215 25% 27%;
+    --background: 18 100% 75%;
+    --foreground: 270 50% 25%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
+    --card-foreground: 270 50% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 27%;
+    --popover-foreground: 270 50% 25%;
 
-    --primary: 215 85% 55%;
+    --primary: 270 65% 55%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 215 20% 96%;
-    --secondary-foreground: 215 25% 27%;
+    --secondary: 18 85% 85%;
+    --secondary-foreground: 270 50% 25%;
 
-    --muted: 215 16% 94%;
-    --muted-foreground: 215 12% 56%;
+    --muted: 18 70% 88%;
+    --muted-foreground: 270 35% 45%;
 
-    --accent: 215 20% 96%;
-    --accent-foreground: 215 25% 27%;
+    --accent: 270 65% 85%;
+    --accent-foreground: 270 50% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 215 20% 88%;
-    --input: 215 20% 88%;
-    --ring: 215 85% 55%;
+    --border: 18 60% 82%;
+    --input: 18 60% 82%;
+    --ring: 270 65% 55%;
 
-    /* Monster AI Brand Colors */
-    --brand-blue: 215 85% 55%;
-    --brand-blue-light: 215 85% 70%;
-    --brand-blue-dark: 215 85% 45%;
+    /* Monster AI Brand Colors - Orange & Purple Theme */
+    --brand-orange: 18 100% 65%;
+    --brand-orange-light: 18 100% 75%;
+    --brand-orange-dark: 18 100% 55%;
+    
+    --brand-purple: 270 65% 55%;
+    --brand-purple-light: 270 65% 70%;
+    --brand-purple-dark: 270 65% 45%;
     
     --accent-green: 145 85% 50%;
-    --accent-orange: 25 95% 58%;
     --accent-yellow: 45 100% 65%;
+    --accent-coral: 12 95% 70%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-blue)), hsl(var(--brand-blue-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-blue)) 0%, hsl(var(--accent-green)) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent-orange)), hsl(var(--accent-yellow)));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(var(--brand-orange-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-purple)) 0%, hsl(var(--brand-orange)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent-coral)), hsl(var(--accent-yellow)));
+    --gradient-warm: linear-gradient(135deg, hsl(var(--brand-orange)) 0%, hsl(var(--accent-coral)) 100%);
     
     /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(var(--brand-blue) / 0.15);
-    --shadow-glow: 0 0 30px hsl(var(--brand-blue) / 0.2);
+    --shadow-soft: 0 4px 20px -4px hsl(var(--brand-purple) / 0.15);
+    --shadow-glow: 0 0 30px hsl(var(--brand-orange) / 0.3);
+    --shadow-purple: 0 8px 32px hsl(var(--brand-purple) / 0.2);
     
     /* Animation */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

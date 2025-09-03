@@ -52,15 +52,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Monster AI Brand Colors
+				// Monster AI Brand Colors - Orange & Purple Theme
 				brand: {
-					blue: 'hsl(var(--brand-blue))',
-					'blue-light': 'hsl(var(--brand-blue-light))',
-					'blue-dark': 'hsl(var(--brand-blue-dark))',
+					orange: 'hsl(var(--brand-orange))',
+					'orange-light': 'hsl(var(--brand-orange-light))',
+					'orange-dark': 'hsl(var(--brand-orange-dark))',
+					purple: 'hsl(var(--brand-purple))',
+					'purple-light': 'hsl(var(--brand-purple-light))',
+					'purple-dark': 'hsl(var(--brand-purple-dark))',
 				},
 				'accent-green': 'hsl(var(--accent-green))',
-				'accent-orange': 'hsl(var(--accent-orange))',
 				'accent-yellow': 'hsl(var(--accent-yellow))',
+				'accent-coral': 'hsl(var(--accent-coral))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -76,10 +79,12 @@ export default {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-accent': 'var(--gradient-accent)',
+				'gradient-warm': 'var(--gradient-warm)',
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
 				'glow': 'var(--shadow-glow)',
+				'purple': 'var(--shadow-purple)',
 			},
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
