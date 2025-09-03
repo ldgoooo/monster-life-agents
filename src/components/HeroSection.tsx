@@ -52,15 +52,14 @@ const HeroSection = () => {
 
           {/* Main Heading with AI Gradient - Smaller Size */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-4 leading-none tracking-tight">
-            Your Daily Life{" "}
+            Monster AI,{" "}
             <span className="text-gradient font-mono">
-              .Agent
+              Your Daily Life Agent.
             </span>
           </h1>
           {/* Subtitle with enhanced styling */}
           <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed font-light">
-            AI that <span className="text-brand-green font-medium">understands</span> your needs and helps you live{" "}
-            <span className="text-gradient font-medium">better</span> every day
+            Practical. Cheaper. More Life.
           </p>
           
           {/* CTA Buttons with enhanced design */}
