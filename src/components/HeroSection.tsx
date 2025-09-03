@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg.png";
 
 const HeroSection = () => {
   return (
@@ -8,9 +8,9 @@ const HeroSection = () => {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={heroBg} 
-          alt="Hero background" 
-          className="w-full h-full object-cover opacity-10"
+          src="/lovable-uploads/2cdfc3c4-1f52-41b1-8cc5-0f92e2339472.png" 
+          alt="Monster AI characters working on various tasks" 
+          className="w-full h-full object-cover opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/50 to-brand-blue/10" />
       </div>
