@@ -8,78 +8,71 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 8%;
-    --foreground: 0 0% 95%;
+    /* Core Colors - Dark AI Theme */
+    --background: 220 13% 4%;
+    --foreground: 220 10% 98%;
+    --card: 220 13% 6%;
+    --card-foreground: 220 10% 98%;
+    --popover: 220 13% 6%;
+    --popover-foreground: 220 10% 98%;
+    --primary: 220 100% 50%;
+    --primary-foreground: 220 10% 98%;
+    --secondary: 220 13% 10%;
+    --secondary-foreground: 220 10% 90%;
+    --muted: 220 13% 12%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 220 13% 12%;
+    --accent-foreground: 220 10% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 15%;
+    --input: 220 13% 15%;
+    --ring: 220 100% 50%;
 
-    --card: 0 0% 12%;
-    --card-foreground: 0 0% 95%;
-
-    --popover: 0 0% 12%;
-    --popover-foreground: 0 0% 95%;
-
-    --primary: 75 100% 50%;
-    --primary-foreground: 0 0% 8%;
-
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 95%;
-
-    --muted: 0 0% 18%;
-    --muted-foreground: 0 0% 65%;
-
-    --accent: 75 100% 50%;
-    --accent-foreground: 0 0% 8%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 75 100% 50%;
-
-    /* Monster AI Brand Colors - Black & Bright Green Theme */
-    --brand-green: 75 100% 50%;
-    --brand-green-light: 75 100% 60%;
-    --brand-green-dark: 75 100% 40%;
+    /* AI Brand Colors */
+    --brand-green: 142 100% 50%;
+    --brand-green-light: 142 100% 60%;
+    --brand-green-dark: 142 100% 35%;
+    --brand-black: 220 13% 4%;
+    --brand-gray: 220 13% 15%;
+    --brand-gray-light: 220 13% 25%;
     
-    --brand-black: 0 0% 8%;
-    --brand-gray: 0 0% 15%;
-    --brand-gray-light: 0 0% 25%;
+    /* AI Accent Colors */
+    --accent-lime: 78 100% 50%;
+    --accent-yellow: 48 100% 50%;
+    --accent-purple: 262 100% 70%;
+    --accent-blue: 217 100% 70%;
+    --accent-pink: 322 100% 70%;
     
-    --accent-lime: 85 100% 55%;
-    --accent-emerald: 150 85% 50%;
-    --accent-yellow: 60 100% 55%;
-    
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-green)), hsl(var(--brand-green-light)));
+    /* AI Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-green)), hsl(var(--accent-lime)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--brand-green)) 0%, hsl(var(--accent-lime)) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--accent-purple)), hsl(var(--accent-blue)));
+    --gradient-ai: linear-gradient(135deg, hsl(var(--accent-blue)), hsl(var(--accent-purple)), hsl(var(--accent-pink)));
+    --gradient-cyber: linear-gradient(90deg, hsl(var(--brand-green) / 0.2), hsl(var(--accent-lime) / 0.2), hsl(var(--accent-yellow) / 0.2));
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent-emerald)), hsl(var(--accent-yellow)));
     --gradient-dark: linear-gradient(135deg, hsl(var(--brand-black)) 0%, hsl(var(--brand-gray)) 100%);
     
-    /* Shadows */
+    /* AI Effects */
     --shadow-soft: 0 4px 20px -4px hsl(var(--brand-green) / 0.25);
-    --shadow-glow: 0 0 30px hsl(var(--brand-green) / 0.4);
+    --shadow-glow: 0 0 20px hsl(var(--brand-green) / 0.4);
+    --shadow-glow-strong: 0 0 40px hsl(var(--brand-green) / 0.6);
+    --shadow-ai: 0 4px 20px hsl(var(--accent-purple) / 0.3);
     --shadow-green: 0 8px 32px hsl(var(--brand-green) / 0.3);
     
-    /* Animation */
+    /* AI Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --radius: 1rem;
+    --sidebar-background: 220 13% 4%;
+    --sidebar-foreground: 220 10% 98%;
+    --sidebar-primary: 142 100% 50%;
+    --sidebar-primary-foreground: 220 13% 4%;
+    --sidebar-accent: 220 13% 10%;
+    --sidebar-accent-foreground: 220 10% 98%;
+    --sidebar-border: 220 13% 15%;
+    --sidebar-ring: 142 100% 50%;
   }
 
   .dark {
@@ -128,5 +121,66 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'cv11', 'ss01';
+    font-variation-settings: 'opsz' 32;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
   }
+}
+
+/* AI-themed animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 5px hsl(var(--brand-green) / 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 20px hsl(var(--brand-green) / 0.8), 0 0 30px hsl(var(--accent-lime) / 0.4);
+  }
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes text-shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Custom utility classes */
+.text-gradient {
+  background: var(--gradient-ai);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: text-shimmer 3s linear infinite;
+}
+
+.bg-mesh {
+  background-image: 
+    radial-gradient(circle at 25% 25%, hsl(var(--brand-green) / 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, hsl(var(--accent-purple) / 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, hsl(var(--accent-blue) / 0.05) 0%, transparent 50%);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
