@@ -52,9 +52,9 @@ const HeroSection = () => {
 
           {/* Main Heading with AI Gradient - Smaller Size */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-4 leading-none tracking-tight">
-            Monster AI,{" "}
+            Monster AI:{" "}
             <span className="text-gradient font-mono">
-              Your Daily Life Agent.
+              From Need to Product
             </span>
           </h1>
           {/* Subtitle with enhanced styling */}
