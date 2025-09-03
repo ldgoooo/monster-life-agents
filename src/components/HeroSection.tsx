@@ -1,32 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import heroBg from "@/assets/hero-bg.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="/lovable-uploads/2cdfc3c4-1f52-41b1-8cc5-0f92e2339472.png" 
-          alt="Monster AI characters working on various tasks" 
-          className="w-full h-full object-cover opacity-20"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background/50 to-brand-blue/10" />
-      </div>
-      
+    <section className="relative min-h-[80vh] flex items-center justify-center bg-background">
       {/* Content */}
-      <div className="container mx-auto px-6 py-20 z-10 text-center">
+      <div className="container mx-auto px-6 py-20 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
-            Your AI Team for{" "}
-            <span className="bg-gradient-hero bg-clip-text text-transparent">
-              Everyday Life
+            Your Daily Life{" "}
+            <span className="text-brand-green">
+              Agent
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            Monster AI is your Life Agent Store. We focus only on your real needs — health, time, money, calories, and more — making life cheaper, easier, and lighter.
+            AI that understands your needs and helps you live better every day
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
