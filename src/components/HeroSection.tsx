@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ArrowRight, Play, Smartphone, Heart, Clock, Wallet, Car, Home, Coffee, ShoppingBag, Camera, Music, Gamepad2, Book, MapPin, Utensils, Plane, Calendar, ShieldCheck, Zap, Users, Briefcase, GraduationCap, Gift, Headphones, Monitor, Dumbbell, Car as Taxi, Pill, TreePine, ShoppingCart } from "lucide-react";
+// import monsterCharacter from "@/assets/monster-character.png";
 
 const HeroSection = () => {
   const [api, setApi] = React.useState<any>();
@@ -32,6 +33,23 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container mx-auto px-6 py-20 text-center relative z-10">
         <div className="max-w-5xl mx-auto">
+          {/* Monster Character */}
+          <div className="flex justify-center mb-8">
+            <div className="relative group">
+              <img 
+                src="/lovable-uploads/17d11a30-4f7e-45b8-87fe-031e28fbd4d1.png" 
+                alt="AI Monster Character" 
+                className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 object-contain filter drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                style={{
+                  filter: 'drop-shadow(0 0 30px hsl(var(--brand-green) / 0.3)) drop-shadow(0 10px 20px rgba(0,0,0,0.2))',
+                  backgroundColor: 'transparent'
+                }}
+              />
+              {/* Glow effect behind character */}
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-green/20 to-accent-lime/20 rounded-full blur-3xl -z-10 group-hover:from-brand-green/30 group-hover:to-accent-lime/30 transition-all duration-300" />
+            </div>
+          </div>
+
           {/* Main Heading with AI Gradient */}
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-8 leading-none tracking-tight">
             Your Daily Life{" "}
