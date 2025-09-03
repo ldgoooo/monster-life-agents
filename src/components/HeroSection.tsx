@@ -17,7 +17,7 @@ const HeroSection = () => {
     return () => clearInterval(autoScroll);
   }, [api]);
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden pt-20">
       {/* AI Mesh Background */}
       <div className="absolute inset-0 bg-mesh" />
       
@@ -31,15 +31,15 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 py-20 text-center relative z-10">
-        <div className="max-w-5xl mx-auto">
+      <div className="container mx-auto px-6 py-12 text-center relative z-10">
+        <div className="max-w-6xl mx-auto">
           {/* Monster Character */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-6">
             <div className="relative group">
               <img 
                 src="/lovable-uploads/17d11a30-4f7e-45b8-87fe-031e28fbd4d1.png" 
                 alt="AI Monster Character" 
-                className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 object-contain filter drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain filter drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
                 style={{
                   filter: 'drop-shadow(0 0 30px hsl(var(--brand-green) / 0.3)) drop-shadow(0 10px 20px rgba(0,0,0,0.2))',
                   backgroundColor: 'transparent'
@@ -50,40 +50,40 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Main Heading with AI Gradient */}
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-8 leading-none tracking-tight">
+          {/* Main Heading with AI Gradient - Smaller Size */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-4 leading-none tracking-tight">
             Your Daily Life{" "}
             <span className="text-gradient font-mono">
               .Agent
             </span>
           </h1>
           {/* Subtitle with enhanced styling */}
-          <p className="text-xl md:text-3xl lg:text-4xl text-muted-foreground mb-16 max-w-4xl mx-auto leading-relaxed font-light">
+          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed font-light">
             AI that <span className="text-brand-green font-medium">understands</span> your needs and helps you live{" "}
             <span className="text-gradient font-medium">better</span> every day
           </p>
           
           {/* CTA Buttons with enhanced design */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
-            <Button variant="hero" size="lg" className="group relative overflow-hidden bg-gradient-to-r from-brand-green to-accent-lime hover:shadow-glow-strong text-black font-semibold px-8 py-4 text-lg">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <Button variant="hero" size="lg" className="group relative overflow-hidden bg-gradient-to-r from-brand-green to-accent-lime hover:shadow-glow-strong text-black font-semibold px-6 py-3 text-base">
               <span className="relative z-10">Join the Waitlist</span>
-              <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform relative z-10" />
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform relative z-10" />
               <div className="absolute inset-0 bg-gradient-to-r from-accent-lime to-brand-green opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </Button>
-            <Button variant="outline-hero" size="lg" className="group glass-effect hover:bg-white/10 text-white border-white/20 hover:border-brand-green/50 px-8 py-4 text-lg">
-              <Play className="w-6 h-6 mr-3" />
+            <Button variant="outline-hero" size="lg" className="group glass-effect hover:bg-white/10 text-white border-white/20 hover:border-brand-green/50 px-6 py-3 text-base">
+              <Play className="w-5 h-5 mr-2" />
               See How It Works
             </Button>
           </div>
-          
-          {/* Life Apps Carousel with AI styling */}
-          <div className="mt-12 mb-16">
-            <div className="flex items-center justify-center mb-10">
-              <div className="h-px bg-gradient-to-r from-transparent via-brand-green to-transparent w-32" />
-              <h3 className="text-lg font-mono font-semibold text-brand-green mx-6 tracking-wider">
+
+          {/* Life Apps Carousel with AI styling - More Compact */}
+          <div className="mt-8 mb-12">
+            <div className="flex items-center justify-center mb-6">
+              <div className="h-px bg-gradient-to-r from-transparent via-brand-green to-transparent w-24" />
+              <h3 className="text-sm font-mono font-semibold text-brand-green mx-4 tracking-wider">
                 30+ AI.AGENTS
               </h3>
-              <div className="h-px bg-gradient-to-r from-transparent via-brand-green to-transparent w-32" />
+              <div className="h-px bg-gradient-to-r from-transparent via-brand-green to-transparent w-24" />
             </div>
             <Carousel
               setApi={setApi}
@@ -92,7 +92,7 @@ const HeroSection = () => {
                 loop: true,
                 dragFree: true,
               }}
-              className="w-full max-w-7xl mx-auto"
+              className="w-full max-w-6xl mx-auto"
             >
               <CarouselContent className="-ml-2 md:-ml-4">
                 {[
@@ -173,26 +173,26 @@ const HeroSection = () => {
             </Carousel>
           </div>
           
-          {/* Status indicators with AI theme */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-10 text-sm">
-            <div className="flex items-center gap-3 group">
+          {/* Status indicators with AI theme - More Compact */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-xs">
+            <div className="flex items-center gap-2 group">
               <div className="relative">
-                <div className="w-3 h-3 bg-brand-green rounded-full animate-pulse" />
-                <div className="absolute inset-0 w-3 h-3 bg-brand-green rounded-full opacity-20" style={{animation: 'glow-pulse 2s ease-in-out infinite'}} />
+                <div className="w-2 h-2 bg-brand-green rounded-full animate-pulse" />
+                <div className="absolute inset-0 w-2 h-2 bg-brand-green rounded-full opacity-20" style={{animation: 'glow-pulse 2s ease-in-out infinite'}} />
               </div>
               <span className="text-muted-foreground group-hover:text-brand-green transition-colors font-mono">30+ AI.AGENTS.READY</span>
             </div>
-            <div className="flex items-center gap-3 group">
+            <div className="flex items-center gap-2 group">
               <div className="relative">
-                <div className="w-3 h-3 bg-accent-lime rounded-full animate-pulse" />
-                <div className="absolute inset-0 w-3 h-3 bg-accent-lime rounded-full opacity-20" style={{animation: 'glow-pulse 2s ease-in-out infinite 0.5s'}} />
+                <div className="w-2 h-2 bg-accent-lime rounded-full animate-pulse" />
+                <div className="absolute inset-0 w-2 h-2 bg-accent-lime rounded-full opacity-20" style={{animation: 'glow-pulse 2s ease-in-out infinite 0.5s'}} />
               </div>
               <span className="text-muted-foreground group-hover:text-accent-lime transition-colors font-mono">7.DAY.FREE.TRIAL</span>
             </div>
-            <div className="flex items-center gap-3 group">
+            <div className="flex items-center gap-2 group">
               <div className="relative">
-                <div className="w-3 h-3 bg-accent-yellow rounded-full animate-pulse" />
-                <div className="absolute inset-0 w-3 h-3 bg-accent-yellow rounded-full opacity-20" style={{animation: 'glow-pulse 2s ease-in-out infinite 1s'}} />
+                <div className="w-2 h-2 bg-accent-yellow rounded-full animate-pulse" />
+                <div className="absolute inset-0 w-2 h-2 bg-accent-yellow rounded-full opacity-20" style={{animation: 'glow-pulse 2s ease-in-out infinite 1s'}} />
               </div>
               <span className="text-muted-foreground group-hover:text-accent-yellow transition-colors font-mono">EARLY.ACCESS.NOW</span>
             </div>
