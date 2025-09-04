@@ -79,57 +79,35 @@ const HeroSection = () => {
               className="w-full max-w-6xl mx-auto"
             >
               <CarouselContent className="-ml-1 md:-ml-2 -space-x-1">
-                {[
-                  { icon: TreePine, label: "Plant Care", color: "text-emerald-500" },
-                  { icon: Moon, label: "Sleep Tracker", color: "text-blue-400" },
-                  { icon: Receipt, label: "Bill Manager", color: "text-green-400" },
-                  { icon: Apple, label: "Calorie Tracker", color: "text-red-400" },
-                  { icon: AlarmClock, label: "Smart Alarm", color: "text-orange-400" },
-                  { icon: Hash, label: "Sudoku", color: "text-purple-400" },
-                  { icon: Calendar, label: "Period Tracker", color: "text-pink-400" },
-                  { icon: FileText, label: "File Converter", color: "text-cyan-400" },
-                ].map((app, index) => (
-                  <CarouselItem key={index} className="-ml-1 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
-                    <div className="flex flex-col items-center group cursor-pointer p-1.5">
-                      {/* Large rectangular icon container (4.5x width - 1.5x increase) */}
-                      <div className="relative w-48 h-20 md:w-54 md:h-24 lg:w-60 lg:h-28 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-3xl shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105 overflow-hidden drop-shadow-md">
-                        {/* Icon background gradient based on color */}
-                        <div className={`absolute inset-0 bg-gradient-to-br opacity-20 ${
-                          app.color.includes('red') ? 'from-red-400 to-red-600' :
-                          app.color.includes('blue') ? 'from-blue-400 to-blue-600' :
-                          app.color.includes('green') ? 'from-green-400 to-green-600' :
-                          app.color.includes('purple') ? 'from-purple-400 to-purple-600' :
-                          app.color.includes('orange') ? 'from-orange-400 to-orange-600' :
-                          app.color.includes('amber') ? 'from-amber-400 to-amber-600' :
-                          app.color.includes('pink') ? 'from-pink-400 to-pink-600' :
-                          app.color.includes('cyan') ? 'from-cyan-400 to-cyan-600' :
-                          app.color.includes('violet') ? 'from-violet-400 to-violet-600' :
-                          app.color.includes('indigo') ? 'from-indigo-400 to-indigo-600' :
-                          app.color.includes('emerald') ? 'from-emerald-400 to-emerald-600' :
-                          app.color.includes('teal') ? 'from-teal-400 to-teal-600' :
-                          app.color.includes('rose') ? 'from-rose-400 to-rose-600' :
-                          app.color.includes('yellow') ? 'from-yellow-400 to-yellow-600' :
-                          app.color.includes('sky') ? 'from-sky-400 to-sky-600' :
-                          app.color.includes('slate') ? 'from-slate-400 to-slate-600' :
-                          app.color.includes('lime') ? 'from-lime-400 to-lime-600' :
-                          app.color.includes('gray') ? 'from-gray-400 to-gray-600' :
-                          'from-brand-green to-accent-lime'
-                        }`} />
-                        
-                        {/* Icon */}
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <app.icon className={`w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 ${app.color} drop-shadow-sm`} />
-                        </div>
-                        
-                        {/* Shine effect */}
-                        <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      </div>
-                      
-                      {/* App name */}
-                      <span className="text-xs font-medium text-muted-foreground group-hover:text-foreground transition-colors text-center mt-2 leading-tight max-w-full">{app.label}</span>
-                    </div>
-                  </CarouselItem>
-                ))}
+                 {[
+                   { label: "Plant Care", bgPosition: "0% 0%" },
+                   { label: "Sleep Tracker", bgPosition: "20% 0%" },
+                   { label: "Bill Manager", bgPosition: "40% 0%" },
+                   { label: "Calorie Tracker", bgPosition: "60% 0%" },
+                   { label: "Smart Alarm", bgPosition: "80% 0%" },
+                   { label: "Sudoku", bgPosition: "100% 0%" },
+                   { label: "Period Tracker", bgPosition: "120% 0%" },
+                   { label: "File Converter", bgPosition: "140% 0%" },
+                 ].map((app, index) => (
+                   <CarouselItem key={index} className="-ml-1 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
+                     <div className="flex flex-col items-center group cursor-pointer p-1.5">
+                       {/* Monster character icon container */}
+                       <div className="relative w-48 h-20 md:w-54 md:h-24 lg:w-60 lg:h-28 rounded-3xl shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105 overflow-hidden drop-shadow-md"
+                            style={{
+                              backgroundImage: "url('/lovable-uploads/dcaa1cf5-5b73-4d71-8010-18753a194608.png')",
+                              backgroundSize: "800% 100%",
+                              backgroundPosition: app.bgPosition,
+                              backgroundRepeat: "no-repeat"
+                            }}>
+                         {/* Shine effect */}
+                         <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                       </div>
+                       
+                       {/* App name */}
+                       <span className="text-xs font-medium text-muted-foreground group-hover:text-foreground transition-colors text-center mt-2 leading-tight max-w-full">{app.label}</span>
+                     </div>
+                   </CarouselItem>
+                 ))}
               </CarouselContent>
               <CarouselPrevious className="hidden md:flex glass-effect hover:bg-brand-green/20 border-brand-green/30" />
               <CarouselNext className="hidden md:flex glass-effect hover:bg-brand-green/20 border-brand-green/30" />
