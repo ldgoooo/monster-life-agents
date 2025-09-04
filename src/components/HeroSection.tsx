@@ -78,7 +78,7 @@ const HeroSection = () => {
               }}
               className="w-full max-w-6xl mx-auto"
             >
-              <CarouselContent className="-ml-1 md:-ml-2">
+              <CarouselContent className="-ml-1 md:-ml-2 -space-x-1">
                 {[
                   { icon: TreePine, label: "Plant Care", color: "text-emerald-500" },
                   { icon: Moon, label: "Sleep Tracker", color: "text-blue-400" },
@@ -89,10 +89,10 @@ const HeroSection = () => {
                   { icon: Calendar, label: "Period Tracker", color: "text-pink-400" },
                   { icon: FileText, label: "File Converter", color: "text-cyan-400" },
                 ].map((app, index) => (
-                  <CarouselItem key={index} className="pl-0.75 md:pl-1 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
+                  <CarouselItem key={index} className="-ml-1 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
                     <div className="flex flex-col items-center group cursor-pointer p-1.5">
                       {/* Large rectangular icon container (4.5x width - 1.5x increase) */}
-                      <div className="relative w-48 h-20 md:w-54 md:h-24 lg:w-60 lg:h-28 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-3xl shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105 overflow-hidden">
+                      <div className="relative w-48 h-20 md:w-54 md:h-24 lg:w-60 lg:h-28 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-3xl shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105 overflow-hidden drop-shadow-md">
                         {/* Icon background gradient based on color */}
                         <div className={`absolute inset-0 bg-gradient-to-br opacity-20 ${
                           app.color.includes('red') ? 'from-red-400 to-red-600' :
