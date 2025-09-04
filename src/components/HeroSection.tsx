@@ -80,16 +80,16 @@ const HeroSection = () => {
             >
               <CarouselContent className="-ml-1 md:-ml-2">
                 {[
-                  { icon: TreePine, label: "植物管理", color: "text-emerald-500" },
-                  { icon: Moon, label: "睡眠管理", color: "text-blue-400" },
-                  { icon: Receipt, label: "账单管理", color: "text-green-400" },
-                  { icon: Apple, label: "卡路里管理", color: "text-red-400" },
-                  { icon: AlarmClock, label: "必醒闹钟", color: "text-orange-400" },
-                  { icon: Hash, label: "数独", color: "text-purple-400" },
-                  { icon: Calendar, label: "经期管理", color: "text-pink-400" },
-                  { icon: FileText, label: "文件转换", color: "text-cyan-400" },
+                  { icon: TreePine, label: "Plant Care", color: "text-emerald-500" },
+                  { icon: Moon, label: "Sleep Tracker", color: "text-blue-400" },
+                  { icon: Receipt, label: "Bill Manager", color: "text-green-400" },
+                  { icon: Apple, label: "Calorie Tracker", color: "text-red-400" },
+                  { icon: AlarmClock, label: "Smart Alarm", color: "text-orange-400" },
+                  { icon: Hash, label: "Sudoku", color: "text-purple-400" },
+                  { icon: Calendar, label: "Period Tracker", color: "text-pink-400" },
+                  { icon: FileText, label: "File Converter", color: "text-cyan-400" },
                 ].map((app, index) => (
-                  <CarouselItem key={index} className="pl-1.5 md:pl-2 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
+                  <CarouselItem key={index} className="pl-0.75 md:pl-1 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
                     <div className="flex flex-col items-center group cursor-pointer p-1.5">
                       {/* Large rectangular icon container (4.5x width - 1.5x increase) */}
                       <div className="relative w-48 h-20 md:w-54 md:h-24 lg:w-60 lg:h-28 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-3xl shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105 overflow-hidden">
