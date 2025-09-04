@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { ArrowRight, Play, Smartphone, Heart, Clock, Wallet, Car, Home, Coffee, ShoppingBag, Camera, Music, Gamepad2, Book, MapPin, Utensils, Plane, Calendar, ShieldCheck, Zap, Users, Briefcase, GraduationCap, Gift, Headphones, Monitor, Dumbbell, Car as Taxi, Pill, TreePine, ShoppingCart } from "lucide-react";
+import { ArrowRight, Play, Smartphone, TreePine, Receipt, Apple, AlarmClock, Hash, Calendar, FileText } from "lucide-react";
 // import monsterCharacter from "@/assets/monster-character.png";
 
 const HeroSection = () => {
