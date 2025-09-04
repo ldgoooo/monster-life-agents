@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import monsterLogo from "@/assets/monster-logo.png";
 
 const Header = () => {
   return (
@@ -7,7 +6,7 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={monsterLogo} alt="Monster AI" className="w-8 h-8" />
+            <img src="/lovable-uploads/c46df122-ae59-4fba-861b-bab47f164c26.png" alt="Monster AI" className="w-8 h-8" />
             <span className="text-xl font-bold text-foreground">Monster AI</span>
           </div>
           
