@@ -33,22 +33,6 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container mx-auto px-6 py-12 text-center relative z-10">
         <div className="max-w-6xl mx-auto">
-          {/* Monster Characters Team */}
-          <div className="flex justify-center mb-6">
-            <div className="relative group">
-              <img 
-                src="/lovable-uploads/e4d05f88-e4ca-4e76-837a-7cf08738a6f0.png" 
-                alt="Monster AI Characters Team" 
-                className="w-80 h-48 md:w-96 md:h-60 lg:w-[28rem] lg:h-64 object-contain monster-glow group-hover:scale-105 transition-all duration-500"
-              />
-              {/* Multi-colored glow effect behind characters */}
-              <div className="absolute inset-0 bg-gradient-monsters opacity-20 rounded-3xl blur-3xl -z-10 group-hover:opacity-30 transition-all duration-500" />
-              {/* Individual character glows */}
-              <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-monster-pink/30 rounded-full blur-2xl animate-pulse" />
-              <div className="absolute top-1/3 left-1/2 w-16 h-16 bg-monster-purple/30 rounded-full blur-2xl animate-pulse" style={{animationDelay: '0.5s'}} />
-              <div className="absolute top-1/2 right-1/4 w-12 h-12 bg-monster-blue/30 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}} />
-            </div>
-          </div>
 
           {/* Main Heading with AI Gradient - Smaller Size */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-4 leading-none tracking-tight">
@@ -93,7 +77,7 @@ const HeroSection = () => {
               }}
               className="w-full max-w-6xl mx-auto"
             >
-              <CarouselContent className="-ml-2 md:-ml-4">
+              <CarouselContent className="-ml-1 md:-ml-2">
                 {[
                   { icon: TreePine, label: "植物管理", color: "text-emerald-500" },
                   { icon: Moon, label: "睡眠管理", color: "text-blue-400" },
@@ -104,10 +88,10 @@ const HeroSection = () => {
                   { icon: Calendar, label: "经期管理", color: "text-pink-400" },
                   { icon: FileText, label: "文件转换", color: "text-cyan-400" },
                 ].map((app, index) => (
-                  <CarouselItem key={index} className="pl-3 md:pl-4 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
-                    <div className="flex flex-col items-center group cursor-pointer p-3">
-                      {/* Large rectangular icon container (3x width) */}
-                      <div className="relative w-32 h-20 md:w-36 md:h-24 lg:w-40 lg:h-28 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-3xl shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105 overflow-hidden">
+                  <CarouselItem key={index} className="pl-1.5 md:pl-2 basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
+                    <div className="flex flex-col items-center group cursor-pointer p-1.5">
+                      {/* Large rectangular icon container (4.5x width - 1.5x increase) */}
+                      <div className="relative w-48 h-20 md:w-54 md:h-24 lg:w-60 lg:h-28 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-3xl shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105 overflow-hidden">
                         {/* Icon background gradient based on color */}
                         <div className={`absolute inset-0 bg-gradient-to-br opacity-20 ${
                           app.color.includes('red') ? 'from-red-400 to-red-600' :
