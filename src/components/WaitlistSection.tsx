@@ -1,13 +1,33 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowRight, Gift, Star, Users, CheckCircle } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const WaitlistSection = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [waitlistCount, setWaitlistCount] = useState(2547); // 默认值，将通过API获取实际数量
   const { toast } = useToast();
+  
+  // 获取等待列表人数
+  const fetchWaitlistCount = async () => {
+    try {
+      const response = await fetch('http://localhost:3009/api/waitlist/count');
+      const data = await response.json();
+      
+      if (response.ok && data.success) {
+        setWaitlistCount(data.count);
+      }
+    } catch (error) {
+      console.error('获取等待列表人数失败:', error);
+    }
+  };
+  
+  // 组件加载时获取等待列表人数
+  useEffect(() => {
+    fetchWaitlistCount();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -16,26 +36,39 @@ const WaitlistSection = () => {
     setIsSubmitting(true);
     
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // 调用API保存邮箱
+      const response = await fetch('http://localhost:3009/api/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
       
-      // Show success toast
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.message || '保存失败');
+      }
+      
+      // 显示成功提示
       toast({
-        title: "🎉 Welcome to Monster AI!",
-        description: `Thanks ${email.split('@')[0]}! You're on the waitlist. We'll notify you when we launch.`,
+        title: "🎉 欢迎加入 Monster AI!",
+        description: `感谢 ${email.split('@')[0]}! 您已成功加入等待列表。我们将在产品发布时通知您。`,
         duration: 5000,
       });
       
-      // Clear form
+      // 清空表单
       setEmail("");
       
-      // Update waitlist count (simulate)
-      console.log("Waitlist signup:", email);
+      // 刷新等待列表人数
+      fetchWaitlistCount();
       
     } catch (error) {
+      console.error('提交失败:', error);
       toast({
-        title: "Something went wrong",
-        description: "Please try again later.",
+        title: "提交失败",
+        description: error instanceof Error ? error.message : "请稍后再试",
         variant: "destructive",
       });
     } finally {
@@ -139,7 +172,7 @@ const WaitlistSection = () => {
                 <div className="w-6 h-6 bg-gradient-accent rounded-full border border-background" />
                 <div className="w-6 h-6 bg-gradient-primary rounded-full border border-background" />
               </div>
-              <span>2,547+ people already joined</span>
+              <span>{waitlistCount.toLocaleString()}+ 人已加入等待列表</span>
             </div>
           </div>
         </div>
