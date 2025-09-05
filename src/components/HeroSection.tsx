@@ -49,7 +49,12 @@ const HeroSection = () => {
           
           {/* CTA Buttons with enhanced design */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button variant="hero" size="lg" className="group relative overflow-hidden bg-gradient-to-r from-brand-green to-accent-lime hover:shadow-glow-strong text-black font-semibold px-6 py-3 text-base">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="group relative overflow-hidden bg-gradient-to-r from-brand-green to-accent-lime hover:shadow-glow-strong text-black font-semibold px-6 py-3 text-base"
+              onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               <span className="relative z-10">Join the Waitlist</span>
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform relative z-10" />
               <div className="absolute inset-0 bg-gradient-to-r from-accent-lime to-brand-green opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

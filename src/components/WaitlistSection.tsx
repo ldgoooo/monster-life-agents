@@ -1,20 +1,50 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ArrowRight, Gift, Star, Users } from "lucide-react";
+import { ArrowRight, Gift, Star, Users, CheckCircle } from "lucide-react";
 import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const WaitlistSection = () => {
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle waitlist signup
-    console.log("Waitlist signup:", email);
-    setEmail("");
+    if (!email) return;
+    
+    setIsSubmitting(true);
+    
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Show success toast
+      toast({
+        title: "🎉 Welcome to Monster AI!",
+        description: `Thanks ${email.split('@')[0]}! You're on the waitlist. We'll notify you when we launch.`,
+        duration: 5000,
+      });
+      
+      // Clear form
+      setEmail("");
+      
+      // Update waitlist count (simulate)
+      console.log("Waitlist signup:", email);
+      
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-brand-blue/5 via-accent-green/5 to-accent-orange/5 relative overflow-hidden">
+    <section id="waitlist" className="py-20 bg-gradient-to-br from-brand-blue/5 via-accent-green/5 to-accent-orange/5 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/5 to-transparent" />
       <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-hero rounded-full opacity-10 animate-pulse" />
@@ -55,9 +85,19 @@ const WaitlistSection = () => {
                 variant="hero" 
                 size="lg"
                 className="px-6 group"
+                disabled={isSubmitting || !email}
               >
-                Join Waitlist
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                {isSubmitting ? (
+                  <>
+                    <div className="w-4 h-4 animate-spin rounded-full border-2 border-background border-t-transparent mr-2" />
+                    Joining...
+                  </>
+                ) : (
+                  <>
+                    Join Waitlist
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </>
+                )}
               </Button>
             </div>
             
